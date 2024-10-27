@@ -16,7 +16,7 @@ const mailslurp = new MailSlurp({ apiKey: envConfig.MAILSLURP_API_KEY});
 let browser;
 let context;
 
-setDefaultTimeout(60 * 1000);
+setDefaultTimeout(150 * 1000);
 
 BeforeAll(async function() {
   try {

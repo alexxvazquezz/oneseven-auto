@@ -1,8 +1,10 @@
 const MailSlurp = require('mailslurp-client').default
 const fs = require('fs');
 const path = require('path');
+const cheerio = require('cheerio');
+require('dotenv').config();
 
-const mailslurp = new MailSlurp({ apiKey: "df037cdb6598ae6bb0335131548d3f44fd7f9e92ac008802796f7d4b21c11374"});
+const mailslurp = new MailSlurp({ apiKey: process.env.MAILSLURP_API_KEY });
 
 
 async function createInbox() {
@@ -69,5 +71,19 @@ async function saveInboxId(inboxId) {
     }
 }
 
+async function getActivationLink(htmlBody) {
+    try {
+        
+        const $ = cheerio.load(htmlBody);
 
-module.exports = {getHtmlFromEmailBody};
+        const activationLink = $('a:contains("Activate Account")').attr('href');
+
+        return activationLink;
+
+    } catch (error) {
+        console.error('Error fetching activation link:', error.message);
+    }
+}
+
+
+module.exports = {getHtmlFromEmailBody, getActivationLink};

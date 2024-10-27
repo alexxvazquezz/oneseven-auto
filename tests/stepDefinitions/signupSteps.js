@@ -6,7 +6,7 @@ const EmailPage = require('../../pages/EmailPage');
 const { RegisterSuccessPage } = require('../../pages/RegisterSuccessPage');
 const { expect } = require('@playwright/test');
 const { context } = require('../support/hooks');
-const { getHtmlFromEmailBody } = require('../../email/email');
+const { getHtmlFromEmailBody, getActivationLink } = require('../../email/email');
 require('dotenv').config();
 
 
@@ -69,24 +69,20 @@ Then('User should be redirected to the signup success page', async function() {
 })
 
 When('User clicks on "Activate Account" from email body', async function() {
-    const emailPage = new EmailPage(this.page);
-   
     const emailHtmlBody = await getHtmlFromEmailBody(process.env.INBOX_ID);
-    await emailPage.renderContent(emailHtmlBody);
-     
-    const pagePromise = context.waitForEvent('page');
-    await emailPage.clickActivateAccount();
-    const newPage = await pagePromise;
-    await newPage.waitForLoadState();
+
+    const activateLink = await getActivationLink(emailHtmlBody);
+
+    await this.page.goto(activateLink);
     
 })
 
 Then('The system should authenticate user, and put them into the signup setup flow', async function() {
     const signupPage = new SignupPage(this.page);
 
-    const signupSetupIputFirstnameText = await signupPage.signupSetupIputFirstname.textContent();
+    const signupSetupIputHeaderText = await signupPage.signupSetupHeader.textContent();
 
-    console.log(signupSetupIputFirstnameText);
+    expect(signupSetupIputHeaderText).toBe('Tell us a bit about you');
 })
 
 

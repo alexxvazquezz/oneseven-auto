@@ -13,6 +13,7 @@ exports.SignupPage = class SignupPage {
         this.passwordInput = page.locator('#new_password');
         this.signUpButton = page.locator('#create-account-enabled');
         this.signupSetupIputFirstname = page.locator('[data-testid="first-name"]');
+        this.signupSetupHeader = page.locator('h2:has-text("Tell us a bit about you")');
      }
     
      async navigateToSignupPage() {

@@ -1,4 +1,6 @@
 const { expect } = require('@playwright/test');
+require('dotenv').config();
+
 
 exports.LoginPage = class LoginPage {
     /**
@@ -6,12 +8,16 @@ exports.LoginPage = class LoginPage {
      */
     constructor(page) {
         this.page = page;
-        this.url = 'https://login.mailchimp.com';
+        this.url;
         this.loginHeader = page.locator('h1.text-align--center.google-sso-login-form-heading');
         this.createAccountLink = page.locator('#create-account-link');
+        this.emailInput = page.locator('input[name="username"]');
+        this.passwordInput = page.locator('input[name="password"]');
+        this.loginButton = page.locator('#submit-btn');
      }
     
      async navigateToLoginPage() {
+         this.url = process.env.LOGIN_URL;
         // await for anh ongoing actions. 
         await this.page.goto(this.url);
      }
@@ -20,6 +26,22 @@ exports.LoginPage = class LoginPage {
         await this.createAccountLink.click();
      }
 
-     
+     async inputEmail(email) {
+       await this.emailInput.fill(email);
+     }
+
+     async inputPassword(password) {
+       await this.passwordInput.fill(password);
+     }
+
+     async clickLogin() {
+      await this.loginButton.click();
+     }
+
+     async loginUser(email, password) {
+      await this.inputEmail(email);
+      await this.inputPassword(password);
+      await this.clickLogin();
+     }
 }
 

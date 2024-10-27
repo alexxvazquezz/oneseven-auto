@@ -1,4 +1,6 @@
 Feature: Login functionality
 
-  # Scenario: User clicks on activation email and logs in
-  #   Given User recieved email and cliks on "Activate Account"
+  Scenario: User Logs in successfully
+    Given I am on the login page
+    When I enter my username, password and click login
+    Then I am redirected to the user dashboard
