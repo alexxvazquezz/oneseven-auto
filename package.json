@@ -1,0 +1,28 @@
+{
+  "name": "oneseven-auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.8.1"
+  },
+  "dependencies": {
+    "@babel/register": "^7.25.9",
+    "@cucumber/cucumber": "^11.0.1",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@faker-js/faker": "^9.1.0",
+    "@ngneat/falso": "^7.2.0",
+    "axios": "^1.7.7",
+    "babel": "^6.23.0",
+    "cucumber": "^6.0.7",
+    "dotenv": "^16.4.5",
+    "mailslurp-client": "^15.20.2",
+    "playwright": "^1.48.2",
+    "reflect-metadata": "^0.2.2"
+  }
+}
