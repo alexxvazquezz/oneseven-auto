@@ -51,7 +51,7 @@ BeforeAll(async function() {
 Before(async function() {
   // Lauches browser for each new test
   browser = await chromium.launch({ 
-    headless: false, 
+    headless: true, 
   }); 
 
   context = await browser.newContext();
