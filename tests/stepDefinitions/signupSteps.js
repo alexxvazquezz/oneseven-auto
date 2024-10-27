@@ -10,45 +10,39 @@ const { getHtmlFromEmailBody, getActivationLink } = require('../../email/email')
 require('dotenv').config();
 
 
-Given('User is on the Mailchimp homepage', async function() {
-    const homePage = new HomePage(this.page);
+
+Given('User is on the Mailchimp Signup Page', async function() {
+    const signupPage = new SignupPage(this.page);
     let currentURL = '';
 
-    await homePage.navigateToHomePage();
+    await signupPage.navigateToSignupPage();
+    await signupPage.handlePopup();
 
     currentURL = this.page.url();
 
-    expect(currentURL).toBe('https://mailchimp.com/');
+    expect(currentURL).toBe(signupPage.url);
 });
 
 
-When('User clicks on the login button', async function() {
-    const homePage = new HomePage(this.page);
+// When('User clicks on the login button', async function() {
+//     const homePage = new HomePage(this.page);
 
-    await homePage.clickLogin();
-});
+//     await homePage.clickLogin();
+// });
 
-Then('User is redirected to the login page', async function() {
-    const loginPage = new LoginPage(this.page);
+// Then('User is redirected to the login page', async function() {
+//     const loginPage = new LoginPage(this.page);
 
-    loginHeaderText = await loginPage.loginHeader.textContent();
+//     loginHeaderText = await loginPage.loginHeader.textContent();
 
-    expect(loginHeaderText).toBe('Log in');
-});
+//     expect(loginHeaderText).toBe('Log in');
+// });
 
-When('User clicks on "Create an account" link', async function() {
-    const loginPage = new LoginPage(this.page);
+// When('User clicks on "Create an account" link', async function() {
+//     const loginPage = new LoginPage(this.page);
 
-    await loginPage.clicOnCreateAccount();
-});
-
-Then('User should be sent to the Signup Page', async function() {
-    const signupPage = new SignupPage(this.page);
-
-    signupPageHeaderText = await signupPage.signupPageHeader.textContent();
-
-    expect(signupPageHeaderText).toBe('Sign up for Mailchimp');
-})
+//     await loginPage.clicOnCreateAccount();
+// });
 
 Then('User Enters all mandatory inputs: [email, username, password], and submits form', async function() {
     const signupPage = new SignupPage(this.page);

@@ -4,7 +4,7 @@ exports.DashboardPage = class DashboardPage {
      */
     constructor(page) {
         this.page = page;
-        this.headerElement = page.locator('h1:has-text("Home")');
+        this.headerElement = page.locator("//h1[text()='Home']");
         this.loginVerification = page.locator('text="Login verification"');
      }
 }

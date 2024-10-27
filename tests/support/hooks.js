@@ -16,7 +16,7 @@ const mailslurp = new MailSlurp({ apiKey: envConfig.MAILSLURP_API_KEY});
 let browser;
 let context;
 
-setDefaultTimeout(150 * 1000);
+setDefaultTimeout(60 * 1000);
 
 BeforeAll(async function() {
   try {
@@ -52,7 +52,7 @@ Before(async function() {
   // Lauches browser for each new test
   browser = await chromium.launch({ 
     headless: true,
-    args: ['--no-sandbox', '--window-size=1920,1040']
+    args: ['--no-sandbox']
   }); 
 
   context = await browser.newContext();
@@ -60,7 +60,14 @@ Before(async function() {
   this.page = await context.newPage();
 });
 
-After(async function() {
+After(async function(scenario) {
+  if (scenario.result.status === 'FAILED') {
+    const screenshotPath = path.join(__dirname, '../../screenshots', `${scenario.pickle.name}.png`);
+    
+    await this.page.screenshot({ path: screenshotPath });
+    
+    await this.attach(screenshotPath, 'image/png');
+  }
   // Close the browser after each test
   await this.page.close();
   await context.close();

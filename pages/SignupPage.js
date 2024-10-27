@@ -6,7 +6,7 @@ exports.SignupPage = class SignupPage {
      */
     constructor(page) {
         this.page = page;
-        this.url = `https:/mailchimp.com/signup`;
+        this.url = 'https://login.mailchimp.com/signup/';
         this.signupPageHeader = page.locator("#signup-page-default-title");
         this.emailInput = page.locator('#email');
         this.usernameInput = page.locator('#new_username');
@@ -14,6 +14,7 @@ exports.SignupPage = class SignupPage {
         this.signUpButton = page.locator('#create-account-enabled');
         this.signupSetupIputFirstname = page.locator('[data-testid="first-name"]');
         this.signupSetupHeader = page.locator('h2:has-text("Tell us a bit about you")');
+        this.dismisPopup = page.locator('#onetrust-accept-btn-handler');
      }
     
      async navigateToSignupPage() {
@@ -41,7 +42,20 @@ exports.SignupPage = class SignupPage {
          await this.page.waitForTimeout(2000);
          // await this.inputUsername(username);
          await this.inputPassword(password);
+         await this.page.waitForTimeout(2000);
          await this.clickSignUp();
      }
+
+     async handlePopup() {
+        try {
+            const popup = await this.page.waitForSelector('#onetrust-accept-btn-handler', { timeout: 5000 });
+
+            if (popup) {
+                await popup.click();
+            }
+        } catch (error) {
+            console.log('Popup not found within the timeout.');
+        }
+    }
 }
 
