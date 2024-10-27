@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "cucumber-js --format json:./reports/cucumber_report.json; node reporter.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.48.2",
-    "@types/node": "^22.8.1"
+    "@types/node": "^22.8.1",
+    "cucumber-html-reporter": "^7.2.0"
   },
   "dependencies": {
     "@babel/register": "^7.25.9",

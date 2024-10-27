@@ -11,7 +11,7 @@ Given('I am on the login page', async function() {
 
     await loginPage.navigateToLoginPage();
 
-    currentURL = this.page.url();
+    currentURL = await this.page.url();
 
     expect(currentURL).toBe(loginPage.url);
 });

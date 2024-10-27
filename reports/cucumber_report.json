@@ -1,0 +1,184 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "signup-functionality;user-creates-a-new-account",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User Creates a New Account",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 258153405
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is on the Mailchimp Signup Page",
+            "match": {
+              "location": "tests/stepDefinitions/signupSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7339428219
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User Enters all mandatory inputs: [email, username, password], and submits form",
+            "match": {
+              "location": "tests/stepDefinitions/signupSteps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4560333602
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should be redirected to the signup success page",
+            "match": {
+              "location": "tests/stepDefinitions/signupSteps.js:55"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30001592475,
+              "error_message": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('#signup-success > div > div.content.line.section > section > div > h1')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:58:87)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User clicks on \"Activate Account\" from email body",
+            "match": {
+              "location": "tests/stepDefinitions/signupSteps.js:65"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "The system should authenticate user, and put them into the signup setup flow",
+            "match": {
+              "location": "tests/stepDefinitions/signupSteps.js:74"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219073576
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "signup-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Signup functionality",
+    "tags": [],
+    "uri": "tests/features/createAccountTest.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality;user-logs-in-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User Logs in successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 217834757
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "tests/stepDefinitions/loginSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2199009661
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter my email, password and click login",
+            "match": {
+              "location": "tests/stepDefinitions/loginSteps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 347549541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I am redirected to the user dashboard",
+            "match": {
+              "location": "tests/stepDefinitions/loginSteps.js:27"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30001265677,
+              "error_message": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('text=\"Login verification\"')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/loginSteps.js:30:65)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 94418524
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login functionality",
+    "tags": [],
+    "uri": "tests/features/loginTest.feature"
+  }
+]

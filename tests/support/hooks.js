@@ -61,17 +61,27 @@ Before(async function() {
 });
 
 After(async function(scenario) {
-  if (scenario.result.status === 'FAILED') {
-    const screenshotPath = path.join(__dirname, '../../screenshots', `${scenario.pickle.name}.png`);
-    
-    await this.page.screenshot({ path: screenshotPath });
-    
-    await this.attach(screenshotPath, 'image/png');
+  try {
+      if (scenario.result.status === 'FAILED') {
+        const screenshotPath = path.resolve(`./reports/screenshots/${Date.now()}.png`);
+        
+        await this.page.screenshot({ path: screenshotPath });
+        
+        scenario.attach(screenshotPath, 'image/png');
+      }
+  } catch (error) {
+      console.error("Error taking screenshot:", error.message); 
+  } finally {
+    if (this.page && this.page.isClosed() === false) {
+      await this.page.close();
+    }
+  if (context) {
+      await context.close();
+    }
+  if (browser) {
+    await browser.close();
+    }
   }
-  // Close the browser after each test
-  await this.page.close();
-  await context.close();
-  await browser.close();
 });
 
 

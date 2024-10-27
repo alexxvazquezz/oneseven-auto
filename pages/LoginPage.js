@@ -11,15 +11,15 @@ exports.LoginPage = class LoginPage {
         this.url;
         this.loginHeader = page.locator('h1.text-align--center.google-sso-login-form-heading');
         this.createAccountLink = page.locator('#create-account-link');
-        this.emailInput = page.locator('input[name="username"]');
-        this.passwordInput = page.locator('input[name="password"]');
-        this.loginButton = page.locator('#submit-btn');
+        this.emailInput = page.locator('input[name="username"]', { state: 'attached' });
+        this.passwordInput = page.locator('input[name="password"]', { state: 'attached' });
+        this.loginButton = page.locator('#submit-btn', { state: 'attached' });
      }
     
      async navigateToLoginPage() {
          this.url = process.env.LOGIN_URL;
         // await for anh ongoing actions. 
-        await this.page.goto(this.url);
+        await this.page.goto(this.url, { waitUntil: 'domcontentloaded' });
      }
 
      async clicOnCreateAccount() {

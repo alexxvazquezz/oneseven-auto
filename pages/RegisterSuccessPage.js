@@ -6,7 +6,7 @@ exports.RegisterSuccessPage = class RegisterSuccessPage {
      */
     constructor(page) {
         this.page = page
-        this.registerSuccessPageHeader = page.locator('#signup-success > div > div.content.line.section > section > div > h1');
+        this.registerSuccessPageHeader = page.locator('#signup-success > div > div.content.line.section > section > div > h1', { state: 'attached' });
      }     
 }
 
