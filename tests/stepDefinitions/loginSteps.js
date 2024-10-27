@@ -25,10 +25,10 @@ When('I enter my username, password and click login', async function() {
 });
 
 Then('I am redirected to the user dashboard', async function() {
-    const dashboarPage = new DashboardPage(this.page);
+    const dashboard = new DashboardPage(this.page);
 
-    const loginVerificationText = await dashboarPage.loginVerification.textContent();
+    const headerElementText = await dashboard.headerElement.textContent();
 
-    expect(loginVerificationText).toBe('Login verification');
+    expect(headerElementText).toBe('Home');
 })
 
