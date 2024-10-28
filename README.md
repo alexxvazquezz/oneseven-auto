@@ -43,10 +43,10 @@ BROWSER=firefox
 ```
 
 2. To change browser globally change .env file `BROWSER={ browser }` to either firefox, chromium or webkit.
-3. To change from headles globally cnage .env file `BROWSER={ headless }` to either true or false.
+3. To change from headles globally change .env file `BROWSER={ headless }` to either true or false.
 
 ## Running Tests
 
-- Run all test in default browse `npm run test`
-- To run on specific browser `npm run test:chrome` for chrome and `npm run test:firefox` for firefox. 
+- Run all test in default browser `npm run test`. Or browser that is specified in the `.env` file.
+- To run on a specific browser `npm run test:chrome` for chrome and `npm run test:firefox` for firefox. 
 
