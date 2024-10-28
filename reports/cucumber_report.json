@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1419614613
+              "duration": 1437922315
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7410011592
+              "duration": 3058480762
             }
           },
           {
@@ -40,8 +40,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1388470321,
-              "error_message": "page.waitForTimeout: Target page, context or browser has been closed\n    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:42:26)\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:5)"
+              "duration": 1763181,
+              "error_message": "locator.fill: Target page, context or browser has been closed\n    at SignupPage.inputEmail (/home/king/Code/oneseven-auto/pages/SignupPage.js:25:31)\n    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:41:21)\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:22)"
             }
           },
           {
@@ -88,7 +88,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 618581340
+              "duration": 532716090
             }
           }
         ],
@@ -118,7 +118,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1336126363
+              "duration": 1392984045
             }
           },
           {
@@ -130,8 +130,9 @@
               "location": "tests/stepDefinitions/loginSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 2121219082
+              "status": "failed",
+              "duration": 3984948962815,
+              "error_message": "Error: function timed out, ensure the promise resolves within 60000 milliseconds\n    at Timeout.<anonymous> (/home/king/Code/oneseven-auto/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -143,8 +144,8 @@
               "location": "tests/stepDefinitions/loginSteps.js:20"
             },
             "result": {
-              "status": "passed",
-              "duration": 201644253
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -156,17 +157,17 @@
               "location": "tests/stepDefinitions/loginSteps.js:27"
             },
             "result": {
-              "status": "failed",
-              "duration": 839938299,
-              "error_message": "locator.textContent: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('text=\"Login verification\"')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/loginSteps.js:30:65)"
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 493494117
+              "status": "failed",
+              "duration": 6634567,
+              "error_message": "Error: write EIO\n    at afterWriteDispatched (node:internal/stream_base_commons:160:15)\n    at writeGeneric (node:internal/stream_base_commons:151:3)\n    at WriteStream.Socket._writeGeneric (node:net:952:11)\n    at WriteStream.Socket._write (node:net:964:8)\n    at writeOrBuffer (node:internal/streams/writable:447:12)\n    at _write (node:internal/streams/writable:389:10)\n    at WriteStream.Writable.write (node:internal/streams/writable:393:10)\n    at PrettyFormatter.logItem (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:99:12)\n    at PrettyFormatter.onTestStepFinished (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:226:12)\n    at PrettyFormatter.parseEnvelope (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:142:12)\n    at EventEmitter.emit (node:events:526:35)"
             }
           }
         ],

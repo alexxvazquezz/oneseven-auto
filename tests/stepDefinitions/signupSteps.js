@@ -23,27 +23,6 @@ Given('User is on the Mailchimp Signup Page', async function() {
     expect(currentURL).toBe(signupPage.url);
 });
 
-
-// When('User clicks on the login button', async function() {
-//     const homePage = new HomePage(this.page);
-
-//     await homePage.clickLogin();
-// });
-
-// Then('User is redirected to the login page', async function() {
-//     const loginPage = new LoginPage(this.page);
-
-//     loginHeaderText = await loginPage.loginHeader.textContent();
-
-//     expect(loginHeaderText).toBe('Log in');
-// });
-
-// When('User clicks on "Create an account" link', async function() {
-//     const loginPage = new LoginPage(this.page);
-
-//     await loginPage.clicOnCreateAccount();
-// });
-
 Then('User Enters all mandatory inputs: [email, username, password], and submits form', async function() {
     const signupPage = new SignupPage(this.page);
     const email = process.env.EMAIL_ADDRESS;
