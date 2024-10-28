@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --format json:./reports/cucumber_report.json; node reporter.js"
+    "test": "npx cucumber-js --format json:./reports/cucumber_report.json; node reporter.js",
+    "test:chrome": "BROWSER=chromium npx cucumber-js --format json:./reports/cucumber_report.json; node reporter.js",
+    "test:firefox": "BROWSER=firefox npx cucumber-js --format json:./reports/cucumber_report.json; node reporter.js",
+    "test:webkit": "BROWSER=webkit npx cucumber-js --format json:./reports/cucumber_report.json; node reporter.js"
   },
   "keywords": [],
   "author": "",

@@ -1,7 +1,5 @@
-const { Before, After, setDefaultTimeout, BeforeAll, AfterAll } = require('@cucumber/cucumber');
-const { firefox, chromium } = require('@playwright/test');
-const config = require('../../playwright.config');
-const { env } = require('process');
+const { Before, After, setDefaultTimeout, BeforeAll } = require('@cucumber/cucumber');
+const { firefox, chromium, webkit } = require('@playwright/test');
 const path = require('path');
 const fs = require('fs');
 const dotenv = require('dotenv');
@@ -12,9 +10,13 @@ const MailSlurp = require('mailslurp-client').default
 const envPath = path.join(__dirname, '../../.env');
 const envConfig = dotenv.parse(fs.readFileSync(envPath));
 const mailslurp = new MailSlurp({ apiKey: envConfig.MAILSLURP_API_KEY});
+const isHeadleass = process.env.HEADLESS === 'true';
 
-let browser;
+dotenv.config();
+
 let context;
+let page;
+let browser;
 
 setDefaultTimeout(60 * 1000);
 
@@ -49,15 +51,27 @@ BeforeAll(async function() {
 
 
 Before(async function() {
+  const browserName = process.env.BROWSER;
+  
   // Lauches browser for each new test
-  browser = await chromium.launch({ 
-    headless: true,
-    args: ['--no-sandbox']
-  }); 
+  switch (browserName) {
+    case 'chromium':
+      browser = await chromium.launch({ headless: isHeadleass });
+      break;
+    case 'firefox':
+      browser = await firefox.launch({ headless: isHeadleass });
+      break;
+    case 'webkit':
+      browser = await webkit.launch({ headless: isHeadleass });
+      break;
+    default:
+      throw new Error(`Unsupported browser: ${browserName}`);
+  }
 
   context = await browser.newContext();
 
   this.page = await context.newPage();
+
 });
 
 After(async function(scenario) {

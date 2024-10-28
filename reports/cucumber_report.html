@@ -401,7 +401,7 @@ pre {
           </div>
           <div class="label-container">
             <div class="generated-on">
-              Sun Oct 27 2024 17:18:39 GMT-0300 (Argentina Standard Time)
+              Sun Oct 27 2024 21:33:17 GMT-0300 (Argentina Standard Time)
             </div>
           </div>
       </div>
@@ -454,7 +454,7 @@ pre {
 
     <div>
       <p class="text-left">
-        Execution Time: 1m 14s 449ms
+        Execution Time: 11s 961ms
       </p>
       <p class="text-right">
         <a id="expand_all">Expand All</a>
@@ -567,7 +567,7 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureoneseven_autoc7f7917f-1bd9-4850-836a-f6300721254d">
+                    <a data-toggle="collapse" href="#collapseFeatureoneseven_autoa5316164-79c7-4c8f-a16f-acfb369066b3">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Signup functionality
@@ -575,7 +575,7 @@ pre {
 
                         
 
-                        <span>41s 901ms</span>
+                        <span>8s 798ms</span>
                                 
               
               <span class="label label-danger"
@@ -588,7 +588,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureoneseven_autoc7f7917f-1bd9-4850-836a-f6300721254d" class="panel-collapse collapse">
+            <div id="collapseFeatureoneseven_autoa5316164-79c7-4c8f-a16f-acfb369066b3" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     
@@ -601,7 +601,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenariooneseven_auto51879196-cf34-4fde-8583-5b950def963f">
+                                <a data-toggle="collapse" href="#collapseScenariooneseven_auto5a14ec77-9607-4c86-a0be-263d003b854b">
                                     <div>
 
                                         <div style="padding-right: 70px">
@@ -611,14 +611,14 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>41s 901ms</span>
+                                <span>8s 798ms</span>
                               
                               <span class="label label-success"
-                                                               title="2 Steps Passed">2</span>
+                                                               title="1 Steps Passed">1</span>
                               
                               
                               <span class="label label-warning"
-                                                                title="2 Steps Skipped">2</span>
+                                                                title="3 Steps Skipped">3</span>
                               <span class="label label-danger"
                                                                title="1 Steps Failed">1</span>
                               
@@ -629,7 +629,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenariooneseven_auto51879196-cf34-4fde-8583-5b950def963f"
+                        <div id="collapseScenariooneseven_auto5a14ec77-9607-4c86-a0be-263d003b854b"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -652,45 +652,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               7s 339ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> User Enters all mandatory inputs: [email, username, password], and submits form</span>
-                            
-                          
-                              <span class="step-duration">
-                               4s 560ms
+                               7s 410ms
                               </span>
                             
                          
@@ -723,12 +685,12 @@ pre {
                                     
                                     
                                     <span class="text">
-                        <span class="keyword highlight">Then </span>
-                          <span class="stepname"> User should be redirected to the signup success page</span>
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> User Enters all mandatory inputs: [email, username, password], and submits form</span>
                             
                           
                               <span class="step-duration">
-                               30s 1ms
+                               1s 388ms
                               </span>
                             
                          
@@ -741,22 +703,20 @@ pre {
                                 
 
                                     
-                                    <a href="#error0_03"
+                                    <a href="#error0_02"
                                        data-toggle="collapse" class="toggle">Show Error +</a>
-                                    <div id="error0_03"
+                                    <div id="error0_02"
                                          class="collapse">
                                         <pre class="info show-modal"
                                              data-toggle="modal"
                                              style="cursor: pointer"
-                                             data-target="#error-modal-0_03">
-                                            <br> locator.textContent: Timeout 30000ms exceeded.
-Call log:
-  [2m- waiting for locator('#signup-success ) div ) div.content.line.section ) section ) div ) h1')[22m
-
-    at World.(anonymous) (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:58:87)</pre>
+                                             data-target="#error-modal-0_02">
+                                            <br> page.waitForTimeout: Target page, context or browser has been closed
+    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:42:26)
+    at World.(anonymous) (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:5)</pre>
                                     </div>
 
-                                <div class="modal fade" id="error-modal-0_03" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="error-modal-0_02" tabindex="-1" role="dialog"
                                      aria-labelledby="stacktraceModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
@@ -770,11 +730,9 @@ Call log:
                                             </div>
                                             <div class="modal-body">
                                                 <h5>
-                                                    <pre><br>locator.textContent: Timeout 30000ms exceeded.
-Call log:
-  [2m- waiting for locator('#signup-success ) div ) div.content.line.section ) section ) div ) h1')[22m
-
-    at World.(anonymous) (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:58:87)</pre>
+                                                    <pre><br>page.waitForTimeout: Target page, context or browser has been closed
+    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:42:26)
+    at World.(anonymous) (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:5)</pre>
                                                 </h5>
                                             </div>
 
@@ -787,6 +745,44 @@ Call log:
                                     </div>
                                 </div>
 
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span class="stepname"> User should be redirected to the signup success page</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
 
                                     
 
@@ -901,7 +897,7 @@ Call log:
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureoneseven_auto993dcb4b-8eee-4bb6-ad15-ebcecdbfdeed">
+                    <a data-toggle="collapse" href="#collapseFeatureoneseven_autob19b8e1e-55cf-46d5-959f-381249cd1056">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Login functionality
@@ -909,7 +905,7 @@ Call log:
 
                         
 
-                        <span>32s 547ms</span>
+                        <span>3s 162ms</span>
                                 
               
               <span class="label label-danger"
@@ -922,7 +918,7 @@ Call log:
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureoneseven_auto993dcb4b-8eee-4bb6-ad15-ebcecdbfdeed" class="panel-collapse collapse">
+            <div id="collapseFeatureoneseven_autob19b8e1e-55cf-46d5-959f-381249cd1056" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     
@@ -935,7 +931,7 @@ Call log:
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenariooneseven_auto23e9e609-0a96-4184-881b-8fe5ffdad6ad">
+                                <a data-toggle="collapse" href="#collapseScenariooneseven_autoa3ff2aa7-776d-4d8e-9e2d-af36080d1a40">
                                     <div>
 
                                         <div style="padding-right: 50px">
@@ -945,7 +941,7 @@ Call log:
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>32s 547ms</span>
+                                <span>3s 162ms</span>
                               
                               <span class="label label-success"
                                                                title="2 Steps Passed">2</span>
@@ -962,7 +958,7 @@ Call log:
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenariooneseven_auto23e9e609-0a96-4184-881b-8fe5ffdad6ad"
+                        <div id="collapseScenariooneseven_autoa3ff2aa7-776d-4d8e-9e2d-af36080d1a40"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -985,7 +981,7 @@ Call log:
                             
                           
                               <span class="step-duration">
-                               2s 199ms
+                               2s 121ms
                               </span>
                             
                          
@@ -1023,7 +1019,7 @@ Call log:
                             
                           
                               <span class="step-duration">
-                               347ms
+                               201ms
                               </span>
                             
                          
@@ -1061,7 +1057,7 @@ Call log:
                             
                           
                               <span class="step-duration">
-                               30s 1ms
+                               839ms
                               </span>
                             
                          
@@ -1082,7 +1078,7 @@ Call log:
                                              data-toggle="modal"
                                              style="cursor: pointer"
                                              data-target="#error-modal-1_03">
-                                            <br> locator.textContent: Timeout 30000ms exceeded.
+                                            <br> locator.textContent: Target page, context or browser has been closed
 Call log:
   [2m- waiting for locator('text="Login verification"')[22m
 
@@ -1103,7 +1099,7 @@ Call log:
                                             </div>
                                             <div class="modal-body">
                                                 <h5>
-                                                    <pre><br>locator.textContent: Timeout 30000ms exceeded.
+                                                    <pre><br>locator.textContent: Target page, context or browser has been closed
 Call log:
   [2m- waiting for locator('text="Login verification"')[22m
 

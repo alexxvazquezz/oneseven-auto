@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 258153405
+              "duration": 1419614613
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7339428219
+              "duration": 7410011592
             }
           },
           {
@@ -39,8 +39,9 @@
               "location": "tests/stepDefinitions/signupSteps.js:47"
             },
             "result": {
-              "status": "passed",
-              "duration": 4560333602
+              "status": "failed",
+              "duration": 1388470321,
+              "error_message": "page.waitForTimeout: Target page, context or browser has been closed\n    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:42:26)\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:5)"
             }
           },
           {
@@ -52,9 +53,8 @@
               "location": "tests/stepDefinitions/signupSteps.js:55"
             },
             "result": {
-              "status": "failed",
-              "duration": 30001592475,
-              "error_message": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('#signup-success > div > div.content.line.section > section > div > h1')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:58:87)"
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -88,7 +88,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 219073576
+              "duration": 618581340
             }
           }
         ],
@@ -118,7 +118,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 217834757
+              "duration": 1336126363
             }
           },
           {
@@ -131,7 +131,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2199009661
+              "duration": 2121219082
             }
           },
           {
@@ -144,7 +144,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 347549541
+              "duration": 201644253
             }
           },
           {
@@ -157,8 +157,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 30001265677,
-              "error_message": "locator.textContent: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('text=\"Login verification\"')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/loginSteps.js:30:65)"
+              "duration": 839938299,
+              "error_message": "locator.textContent: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('text=\"Login verification\"')\u001b[22m\n\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/loginSteps.js:30:65)"
             }
           },
           {
@@ -166,7 +166,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94418524
+              "duration": 493494117
             }
           }
         ],
