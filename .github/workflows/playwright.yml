@@ -19,8 +19,9 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Cucumber Tests
       run: npm test      
+    - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report
+        name: cucumber_report.json
         path: playwright-report/
         retention-days: 30
