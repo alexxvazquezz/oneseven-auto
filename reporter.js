@@ -1,4 +1,8 @@
 const reporter = require('cucumber-html-reporter');
+const dotenv = require('dotenv').config();
+
+const browser = process.env.BROWSER;
+
 
 const options = {
     theme: 'bootstrap',
@@ -8,7 +12,7 @@ const options = {
     launchReport: true,
     metadata: {
         "App Version": "1.0.0",
-        "Test Environment": "STAGING",
+        "Test Environment": browser,
         "Browser": "Chromium",
         "Platform": "MacOS",
         "Parallel": "Scenarios",

@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1437922315
+              "duration": 947577647
             }
           },
           {
@@ -27,60 +27,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3058480762
+              "duration": 7232467463
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 5,
             "name": "User Enters all mandatory inputs: [email, username, password], and submits form",
             "match": {
-              "location": "tests/stepDefinitions/signupSteps.js:47"
+              "location": "tests/stepDefinitions/signupSteps.js:26"
             },
             "result": {
-              "status": "failed",
-              "duration": 1763181,
-              "error_message": "locator.fill: Target page, context or browser has been closed\n    at SignupPage.inputEmail (/home/king/Code/oneseven-auto/pages/SignupPage.js:25:31)\n    at SignupPage.signUp (/home/king/Code/oneseven-auto/pages/SignupPage.js:41:21)\n    at World.<anonymous> (/home/king/Code/oneseven-auto/tests/stepDefinitions/signupSteps.js:52:22)"
+              "status": "passed",
+              "duration": 4356593412
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 6,
             "name": "User should be redirected to the signup success page",
             "match": {
-              "location": "tests/stepDefinitions/signupSteps.js:55"
+              "location": "tests/stepDefinitions/signupSteps.js:34"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 6047952132
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 7,
             "name": "User clicks on \"Activate Account\" from email body",
             "match": {
-              "location": "tests/stepDefinitions/signupSteps.js:65"
+              "location": "tests/stepDefinitions/signupSteps.js:44"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 10319288042
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 8,
             "name": "The system should authenticate user, and put them into the signup setup flow",
             "match": {
-              "location": "tests/stepDefinitions/signupSteps.js:74"
+              "location": "tests/stepDefinitions/signupSteps.js:53"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 77839447
             }
           },
           {
@@ -88,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 532716090
+              "duration": 532629671
             }
           }
         ],
@@ -118,7 +117,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1392984045
+              "duration": 862793001
             }
           },
           {
@@ -130,9 +129,8 @@
               "location": "tests/stepDefinitions/loginSteps.js:8"
             },
             "result": {
-              "status": "failed",
-              "duration": 3984948962815,
-              "error_message": "Error: function timed out, ensure the promise resolves within 60000 milliseconds\n    at Timeout.<anonymous> (/home/king/Code/oneseven-auto/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "status": "passed",
+              "duration": 2390219407
             }
           },
           {
@@ -144,8 +142,8 @@
               "location": "tests/stepDefinitions/loginSteps.js:20"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 793890539
             }
           },
           {
@@ -157,17 +155,16 @@
               "location": "tests/stepDefinitions/loginSteps.js:27"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 3939095856
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "failed",
-              "duration": 6634567,
-              "error_message": "Error: write EIO\n    at afterWriteDispatched (node:internal/stream_base_commons:160:15)\n    at writeGeneric (node:internal/stream_base_commons:151:3)\n    at WriteStream.Socket._writeGeneric (node:net:952:11)\n    at WriteStream.Socket._write (node:net:964:8)\n    at writeOrBuffer (node:internal/streams/writable:447:12)\n    at _write (node:internal/streams/writable:389:10)\n    at WriteStream.Writable.write (node:internal/streams/writable:393:10)\n    at PrettyFormatter.logItem (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:99:12)\n    at PrettyFormatter.onTestStepFinished (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:226:12)\n    at PrettyFormatter.parseEnvelope (/home/king/Code/oneseven-auto/node_modules/@cucumber/pretty-formatter/src/index.ts:142:12)\n    at EventEmitter.emit (node:events:526:35)"
+              "status": "passed",
+              "duration": 547898185
             }
           }
         ],
